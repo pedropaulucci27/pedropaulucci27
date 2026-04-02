@@ -27,9 +27,9 @@ foco:        Back-end · Dados · IA · Web
 inglês:      B2 — Intermediário alto
 ```
 
-Estudante de Engenharia de Software com especialização em Ciência de Dados & IA pela Ibmec BH.
-Atuando como Diretor de Operações na Ibtech, com experiência em desenvolvimento de sistemas,
-análise de dados e gestão de projetos tecnológicos.
+Sou estudante de Engenharia de Software e Ciência de Dados & IA no IBMEC, com grande interesse em tecnologia, desenvolvimento de software, inteligência artificial e produtos digitais.
+
+Estou focado em fortalecer minha base técnica, desenvolver projetos práticos e evoluir continuamente como desenvolvedor, unindo aprendizado, disciplina e vontade de construir soluções úteis e bem estruturadas.
 
 ---
 
