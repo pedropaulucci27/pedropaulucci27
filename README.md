@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./profile_animation.svg" width="100%"/>
+<img src="./profile_animation.svg?v=2" width="100%"/>
 </div>
 
 ---
