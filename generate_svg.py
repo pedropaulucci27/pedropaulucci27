@@ -265,17 +265,17 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
 <text x="24" y="164" class="subtitle s3">Ibmec BH · Ibtech · Belo Horizonte</text>
 
 <!-- Tags com bordas -->
-<rect x="22" y="178" width="84" height="18" rx="4" class="tag-bg tb-1"/>
+<rect x="22" y="178" width="110" height="18" rx="4" class="tag-bg tb-1"/>
 <text x="30" y="191" class="tag tag-1">&#x25CF; Data Science</text>
 
-<rect x="114" y="178" width="68" height="18" rx="4" class="tag-bg tb-2"/>
-<text x="122" y="191" class="tag tag-2">&#x25CF; Web Dev</text>
+<rect x="138" y="178" width="80" height="18" rx="4" class="tag-bg tb-2"/>
+<text x="146" y="191" class="tag tag-2">&#x25CF; Web Dev</text>
 
-<rect x="22" y="202" width="68" height="18" rx="4" class="tag-bg tb-3"/>
+<rect x="22" y="202" width="98" height="18" rx="4" class="tag-bg tb-3"/>
 <text x="30" y="215" class="tag tag-3">&#x25CF; Java &amp; OOP</text>
 
-<rect x="98" y="202" width="92" height="18" rx="4" class="tag-bg tb-4"/>
-<text x="106" y="215" class="tag tag-4">&#x25CF; Node &amp; Express</text>
+<rect x="126" y="202" width="116" height="18" rx="4" class="tag-bg tb-4"/>
+<text x="134" y="215" class="tag tag-4">&#x25CF; Node &amp; Express</text>
 
 <!-- Divisor vertical animado -->
 <line x1="248" y1="0" x2="248" y2="0" stroke="{cor1}" stroke-width="0.5" stroke-opacity="0.3" class="divv">
@@ -291,34 +291,34 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
 </rect>
 
 <!-- JavaScript -->
-<text x="268" y="68" class="skill-label sl-1">JavaScript</text>
-<rect x="358" y="58" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="58" width="412" height="8" rx="4" class="bar-fill bf-1"/>
-<text x="824" y="68" class="bar-pct bp-1">90%</text>
+<text x="268" y="82" class="skill-label sl-1">JavaScript</text>
+<rect x="358" y="72" width="458" height="8" rx="4" fill="#21262d"/>
+<rect x="358" y="72" width="412" height="8" rx="4" class="bar-fill bf-1"/>
+<text x="824" y="82" class="bar-pct bp-1">90%</text>
 
 <!-- Python -->
-<text x="268" y="96" class="skill-label sl-2">Python</text>
-<rect x="358" y="86" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="86" width="321" height="8" rx="4" class="bar-fill bf-2"/>
-<text x="824" y="96" class="bar-pct bp-2">70%</text>
+<text x="268" y="110" class="skill-label sl-2">Python</text>
+<rect x="358" y="100" width="458" height="8" rx="4" fill="#21262d"/>
+<rect x="358" y="100" width="321" height="8" rx="4" class="bar-fill bf-2"/>
+<text x="824" y="110" class="bar-pct bp-2">70%</text>
 
 <!-- Java -->
-<text x="268" y="124" class="skill-label sl-3">Java</text>
-<rect x="358" y="114" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="114" width="275" height="8" rx="4" class="bar-fill bf-3"/>
-<text x="824" y="124" class="bar-pct bp-3">60%</text>
+<text x="268" y="138" class="skill-label sl-3">Java</text>
+<rect x="358" y="128" width="458" height="8" rx="4" fill="#21262d"/>
+<rect x="358" y="128" width="275" height="8" rx="4" class="bar-fill bf-3"/>
+<text x="824" y="138" class="bar-pct bp-3">60%</text>
 
 <!-- C -->
-<text x="268" y="152" class="skill-label sl-4">C</text>
-<rect x="358" y="142" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="142" width="229" height="8" rx="4" class="bar-fill bf-4"/>
-<text x="824" y="152" class="bar-pct bp-4">50%</text>
+<text x="268" y="166" class="skill-label sl-4">C</text>
+<rect x="358" y="156" width="458" height="8" rx="4" fill="#21262d"/>
+<rect x="358" y="156" width="229" height="8" rx="4" class="bar-fill bf-4"/>
+<text x="824" y="166" class="bar-pct bp-4">50%</text>
 
 <!-- Node.js -->
-<text x="268" y="180" class="skill-label sl-5">Node.js</text>
-<rect x="358" y="170" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="170" width="183" height="8" rx="4" class="bar-fill bf-5"/>
-<text x="824" y="180" class="bar-pct bp-5">40%</text>
+<text x="268" y="194" class="skill-label sl-5">Node.js</text>
+<rect x="358" y="184" width="458" height="8" rx="4" fill="#21262d"/>
+<rect x="358" y="184" width="183" height="8" rx="4" class="bar-fill bf-5"/>
+<text x="824" y="194" class="bar-pct bp-5">40%</text>
 
 <!-- Linha inferior com gradiente -->
 <rect x="0" y="278" width="860" height="2" fill="url(#lineGrad)" rx="1"/>
