@@ -79,8 +79,20 @@ análise de dados e gestão de projetos tecnológicos.
 
 <div align="center">
 
-<img height="160em" src="https://github-readme-stats.vercel.app/api?username=pedropaulucci27&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117"/>
-<img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pedropaulucci27&layout=compact&langs_count=6&theme=tokyonight&hide_border=true&bg_color=0d1117"/>
+<img height="170em" src="https://github-readme-stats.vercel.app/api?username=pedropaulucci27&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=a78bfa&text_color=c9d1d9"/>
+<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pedropaulucci27&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9"/>
+
+</div>
+
+<div align="center">
+
+<img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=pedropaulucci27&theme=tokyonight&hide_border=true&background=0d1117&ring=a78bfa&fire=c084fc&currStreakLabel=a78bfa"/>
+
+</div>
+
+<div align="center">
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=pedropaulucci27&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=a78bfa&line=7c3aed&point=c084fc&area=true&area_color=7c3aed"/>
 
 </div>
 
