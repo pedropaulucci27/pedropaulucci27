@@ -1,6 +1,5 @@
 from datetime import datetime, timezone, timedelta
 
-# Horário de Brasília
 brt = timezone(timedelta(hours=-3))
 hora = datetime.now(brt).hour
 
@@ -33,18 +32,21 @@ else:
     cor_dot = "#34d399"
     descricao = "Madrugada. O melhor horario para codar."
 
-svg = f'''<svg width="860" height="200" xmlns="http://www.w3.org/2000/svg">
+svg = f'''<svg width="860" height="220" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#0d1117"/>
       <stop offset="100%" style="stop-color:#161b22"/>
     </linearGradient>
+    <clipPath id="leftClip">
+      <rect x="0" y="0" width="230" height="220"/>
+    </clipPath>
     <style>
       .bg {{ fill: url(#bgGrad); }}
       .grid-line {{ stroke: #21262d; stroke-width: 0.5; }}
       .name {{
         font-family: "Fira Code", monospace;
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 700;
         fill: #ffffff;
         opacity: 0;
@@ -57,7 +59,7 @@ svg = f'''<svg width="860" height="200" xmlns="http://www.w3.org/2000/svg">
       }}
       .tag {{
         font-family: "Fira Code", monospace;
-        font-size: 12px;
+        font-size: 11px;
         fill: {cor_destaque};
         opacity: 0;
         animation: fadeIn 0.5s ease forwards;
@@ -100,7 +102,7 @@ svg = f'''<svg width="860" height="200" xmlns="http://www.w3.org/2000/svg">
       .dot-4 {{ animation-delay: 1.9s; }}
       .subtitle {{
         font-family: "Fira Code", monospace;
-        font-size: 12px;
+        font-size: 11px;
         fill: #8b949e;
         opacity: 0;
         animation: fadeIn 0.8s ease forwards;
@@ -108,7 +110,7 @@ svg = f'''<svg width="860" height="200" xmlns="http://www.w3.org/2000/svg">
       }}
       .prompt {{
         font-family: "Fira Code", monospace;
-        font-size: 12px;
+        font-size: 11px;
         fill: #3fb950;
         opacity: 0;
         animation: fadeIn 0.5s ease forwards;
@@ -116,7 +118,7 @@ svg = f'''<svg width="860" height="200" xmlns="http://www.w3.org/2000/svg">
       }}
       .greeting {{
         font-family: "Fira Code", monospace;
-        font-size: 13px;
+        font-size: 12px;
         fill: {cor_destaque};
         opacity: 0;
         animation: fadeIn 0.5s ease forwards;
@@ -153,56 +155,71 @@ svg = f'''<svg width="860" height="200" xmlns="http://www.w3.org/2000/svg">
     </style>
   </defs>
 
-  <rect width="860" height="200" class="bg" rx="12"/>
+  <rect width="860" height="220" class="bg" rx="12"/>
 
-  <line x1="0" y1="50" x2="860" y2="50" class="grid-line"/>
-  <line x1="0" y1="100" x2="860" y2="100" class="grid-line"/>
-  <line x1="0" y1="150" x2="860" y2="150" class="grid-line"/>
-  <line x1="210" y1="0" x2="210" y2="200" class="grid-line"/>
+  <!-- Grid -->
+  <line x1="0" y1="55" x2="860" y2="55" class="grid-line"/>
+  <line x1="0" y1="110" x2="860" y2="110" class="grid-line"/>
+  <line x1="0" y1="165" x2="860" y2="165" class="grid-line"/>
+  <line x1="240" y1="0" x2="240" y2="220" class="grid-line"/>
 
-  <text x="24" y="30" class="greeting">{emoji}  {periodo}, visitante!</text>
-  <text x="24" y="50" class="prompt">~/pedropaulucci27 $</text>
-  <text x="24" y="82" class="name">Pedro Paulucci</text>
-  <rect x="212" y="64" width="10" height="22" class="cursor"/>
-  <text x="24" y="105" class="subtitle">Software Eng. + Data Science &amp; AI</text>
-  <text x="24" y="120" class="subtitle">{descricao}</text>
-  <text x="24" y="135" class="subtitle">Ibmec BH · Ibtech · BH</text>
+  <!-- Lado esquerdo (clipado para nao vazar) -->
+  <g clip-path="url(#leftClip)">
+    <text x="16" y="28" class="greeting">{emoji}  {periodo}, visitante!</text>
+    <text x="16" y="48" class="prompt">~/pedropaulucci27 $</text>
+    <text x="16" y="80" class="name">Pedro Paulucci</text>
+    <rect x="196" y="63" width="9" height="20" class="cursor"/>
+    <text x="16" y="102" class="subtitle">Software Eng. + Data Science &amp; AI</text>
+    <text x="16" y="116" class="subtitle">{descricao}</text>
+    <text x="16" y="130" class="subtitle">Ibmec BH · Ibtech · BH</text>
 
-  <line x1="24" y1="148" x2="190" y2="148" class="divider"/>
+    <line x1="16" y1="143" x2="224" y2="143" class="divider"/>
 
-  <circle cx="32" cy="163" r="4" class="dot dot-1"/>
-  <text x="42" y="167" class="tag tag-1">Data Science</text>
-  <circle cx="32" cy="180" r="4" class="dot dot-2"/>
-  <text x="42" y="184" class="tag tag-2">Web Dev</text>
-  <circle cx="120" cy="163" r="4" class="dot dot-3"/>
-  <text x="130" y="167" class="tag tag-3">Java &amp; OOP</text>
-  <circle cx="120" cy="180" r="4" class="dot dot-4"/>
-  <text x="130" y="184" class="tag tag-4">Node &amp; Express</text>
+    <circle cx="24" cy="158" r="4" class="dot dot-1"/>
+    <text x="34" y="162" class="tag tag-1">Data Science</text>
 
-  <line x1="210" y1="20" x2="210" y2="185" class="divider"/>
+    <circle cx="24" cy="175" r="4" class="dot dot-2"/>
+    <text x="34" y="179" class="tag tag-2">Web Dev</text>
 
-  <text x="228" y="35" class="prompt">skills.json</text>
+    <circle cx="130" cy="158" r="4" class="dot dot-3"/>
+    <text x="140" y="162" class="tag tag-3">Java &amp; OOP</text>
 
-  <text x="228" y="62" class="bar-label bl-1">JavaScript</text>
-  <rect x="318" y="52" width="510" height="9" rx="4" fill="#21262d"/>
-  <rect x="318" y="52" width="459" height="9" rx="4" class="bar-fill bar-1"/>
+    <circle cx="130" cy="175" r="4" class="dot dot-4"/>
+    <text x="140" y="179" class="tag tag-4">Node &amp; Express</text>
+  </g>
 
-  <text x="228" y="87" class="bar-label bl-2">Python</text>
-  <rect x="318" y="77" width="510" height="9" rx="4" fill="#21262d"/>
-  <rect x="318" y="77" width="357" height="9" rx="4" class="bar-fill bar-2"/>
+  <!-- Divisor vertical -->
+  <line x1="240" y1="15" x2="240" y2="205" class="divider"/>
 
-  <text x="228" y="112" class="bar-label bl-3">Java</text>
-  <rect x="318" y="102" width="510" height="9" rx="4" fill="#21262d"/>
-  <rect x="318" y="102" width="306" height="9" rx="4" class="bar-fill bar-3"/>
+  <!-- Lado direito: skill bars -->
+  <text x="258" y="32" class="prompt">skills.json</text>
 
-  <text x="228" y="137" class="bar-label bl-4">C</text>
-  <rect x="318" y="127" width="510" height="9" rx="4" fill="#21262d"/>
-  <rect x="318" y="127" width="255" height="9" rx="4" class="bar-fill bar-4"/>
+  <text x="258" y="62" class="bar-label bl-1">JavaScript</text>
+  <rect x="348" y="52" width="490" height="9" rx="4" fill="#21262d"/>
+  <rect x="348" y="52" width="441" height="9" rx="4" class="bar-fill bar-1"/>
 
-  <text x="228" y="162" class="bar-label bl-5">Node.js</text>
-  <rect x="318" y="152" width="510" height="9" rx="4" fill="#21262d"/>
-  <rect x="318" y="152" width="204" height="9" rx="4" class="bar-fill bar-5"/>
+  <text x="258" y="90" class="bar-label bl-2">Python</text>
+  <rect x="348" y="80" width="490" height="9" rx="4" fill="#21262d"/>
+  <rect x="348" y="80" width="343" height="9" rx="4" class="bar-fill bar-2"/>
 
+  <text x="258" y="118" class="bar-label bl-3">Java</text>
+  <rect x="348" y="108" width="490" height="9" rx="4" fill="#21262d"/>
+  <rect x="348" y="108" width="294" height="9" rx="4" class="bar-fill bar-3"/>
+
+  <text x="258" y="146" class="bar-label bl-4">C</text>
+  <rect x="348" y="136" width="490" height="9" rx="4" fill="#21262d"/>
+  <rect x="348" y="136" width="245" height="9" rx="4" class="bar-fill bar-4"/>
+
+  <text x="258" y="174" class="bar-label bl-5">Node.js</text>
+  <rect x="348" y="164" width="490" height="9" rx="4" fill="#21262d"/>
+  <rect x="348" y="164" width="196" height="9" rx="4" class="bar-fill bar-5"/>
+
+</svg>'''
+
+with open("profile_animation.svg", "w") as f:
+    f.write(svg)
+
+print(f"SVG gerado! Periodo: {periodo} ({hora}h)")
 </svg>'''
 
 with open("profile_animation.svg", "w") as f:
