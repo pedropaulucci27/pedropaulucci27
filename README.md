@@ -79,13 +79,6 @@ análise de dados e gestão de projetos tecnológicos.
 
 <div align="center">
 
-<img height="170em" src="https://github-readme-stats.vercel.app/api?username=pedropaulucci27&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=a78bfa&text_color=c9d1d9"/>
-<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=pedropaulucci27&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9"/>
-
-</div>
-
-<div align="center">
-
 <img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=pedropaulucci27&theme=tokyonight&hide_border=true&background=0d1117&ring=a78bfa&fire=c084fc&currStreakLabel=a78bfa"/>
 
 </div>
@@ -100,8 +93,10 @@ análise de dados e gestão de projetos tecnológicos.
 
 ## Contato
 
-| Canal | Link |
-|-------|------|
-| LinkedIn | [linkedin.com/in/pedropaulucci](https://www.linkedin.com/in/pedropaulucci) |
-| E-mail | peeronoronha@gmail.com |
-| GitHub | [@pedropaulucci27](https://github.com/pedropaulucci27) |
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-pedropaulucci-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedropaulucci)
+[![Gmail](https://img.shields.io/badge/Gmail-peeronoronha@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:peeronoronha@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-pedropaulucci27-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pedropaulucci27)
+
+</div>
