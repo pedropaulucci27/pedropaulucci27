@@ -192,7 +192,7 @@
 <!-- Borda superior com gradiente animado -->
 <rect x="0" y="0" width="860" height="2" fill="url(#lineGrad)" rx="1"/>
 
-<!-- Partículas flutuantes decorativas -->
+<!-- PartÃ­culas flutuantes decorativas -->
 <circle cx="80" cy="240" r="2" fill="#4fc3f7" opacity="0">
   <animate attributeName="opacity" values="0;0.5;0" dur="4s" begin="2s" repeatCount="indefinite"/>
   <animate attributeName="cy" values="240;180;240" dur="4s" begin="2s" repeatCount="indefinite"/>
@@ -216,7 +216,7 @@
 </circle>
 
 <!-- Coluna esquerda -->
-<!-- Saudação -->
+<!-- SaudaÃ§Ã£o -->
 <text x="24" y="32" class="greeting">&#x1F305;  Bom dia, visitante!</text>
 <text x="24" y="50" class="prompt">~/pedropaulucci27 $</text>
 
@@ -229,10 +229,10 @@
   <animate attributeName="width" from="0" to="230" dur="0.8s" begin="1.2s" fill="freeze"/>
 </rect>
 
-<!-- Subtítulos -->
+<!-- SubtÃ­tulos -->
 <text x="24" y="132" class="subtitle s1">Software Eng. + Data Science &amp; AI</text>
 <text x="24" y="148" class="subtitle s2">Comecando mais um dia de codigo...</text>
-<text x="24" y="164" class="subtitle s3">Ibmec BH · Ibtech · Belo Horizonte</text>
+<text x="24" y="164" class="subtitle s3">Ibmec BH Â· Ibtech Â· Belo Horizonte</text>
 
 <!-- Tags com bordas -->
 <rect x="22" y="178" width="110" height="18" rx="4" class="tag-bg tb-1"/>
