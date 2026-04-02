@@ -50,22 +50,6 @@ inglês:      Intermediário alto (B2)
 
 ---
 
-## 🏆 Troféus
-
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=pedropaulucci27&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1&column=7"/>
-</div>
-
----
-
-## ⭐ Conquistas
-
-- 🥇 **Medalha de Ouro Regional** — Olímpiada Internacional de Matemática Sem Fronteiras (2022)
-- 🥈 **Medalha de Prata Nacional** — Olímpiada Internacional de Matemática Sem Fronteiras (2022)
-- 🚀 **Projeto selecionado como destaque** — Apresentado à liderança de Design e Marketing de empresa do setor energético
-
----
-
 ## 📫 Contato
 
 <div align="center">
