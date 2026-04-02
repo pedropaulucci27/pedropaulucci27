@@ -11,6 +11,7 @@ Diretor de Operações @ Ibtech · Belo Horizonte, MG
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedropaulucci)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:peeronoronha@gmail.com)
+[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-Ver%20Projetos-6e40c9?style=flat-square&logo=github&logoColor=white)](https://github.com/pedropaulucci27?tab=repositories)
 
 </div>
 
