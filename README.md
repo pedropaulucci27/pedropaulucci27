@@ -87,6 +87,12 @@ análise de dados e gestão de projetos tecnológicos.
 
 <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=pedropaulucci27&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=a78bfa&line=7c3aed&point=c084fc&area=true&area_color=7c3aed"/>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/pedropaulucci27/pedropaulucci27/output/snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/pedropaulucci27/pedropaulucci27/output/snake.svg"/>
+  <img alt="snake animation" src="https://raw.githubusercontent.com/pedropaulucci27/pedropaulucci27/output/snake-dark.svg" width="100%"/>
+</picture>
+
 </div>
 
 ---
