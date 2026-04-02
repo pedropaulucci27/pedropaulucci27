@@ -28,11 +28,17 @@ else:
     cor2 = "#10b981"
     descricao = "Madrugada. O melhor horario para codar."
 
+# Layout constants
+# SVG: 860x280
+# Left column:  x=24  .. x=270  (246px)
+# Divider:      x=284
+# Right column: x=300 .. x=836  (536px)
+# Bar track:    x=390 .. x=810  (420px), pct text x=816
+
 svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
 <defs>
   <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" style="stop-color:#0d1117"/>
-    <stop offset="50%" style="stop-color:#0d1117"/>
+    <stop offset="0%"   style="stop-color:#0d1117"/>
     <stop offset="100%" style="stop-color:#161b22"/>
   </linearGradient>
   <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -44,8 +50,8 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
     </stop>
   </linearGradient>
   <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" style="stop-color:{cor1};stop-opacity:0"/>
-    <stop offset="50%" style="stop-color:{cor1};stop-opacity:1"/>
+    <stop offset="0%"   style="stop-color:{cor1};stop-opacity:0"/>
+    <stop offset="50%"  style="stop-color:{cor1};stop-opacity:1"/>
     <stop offset="100%" style="stop-color:{cor2};stop-opacity:0"/>
   </linearGradient>
   <filter id="glow">
@@ -56,7 +62,7 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
     </feMerge>
   </filter>
   <filter id="softglow">
-    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
     <feMerge>
       <feMergeNode in="coloredBlur"/>
       <feMergeNode in="SourceGraphic"/>
@@ -66,7 +72,7 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
     .bg {{ fill: url(#bg); }}
     .name {{
       font-family: "Fira Code", monospace;
-      font-size: 38px;
+      font-size: 28px;
       font-weight: 700;
       fill: url(#nameGrad);
       filter: url(#softglow);
@@ -75,21 +81,21 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
     }}
     .greeting {{
       font-family: "Fira Code", monospace;
-      font-size: 12px;
+      font-size: 11px;
       fill: {cor1};
       opacity: 0;
       animation: fadeIn 0.6s ease forwards 0.2s;
     }}
     .prompt {{
       font-family: "Fira Code", monospace;
-      font-size: 11px;
+      font-size: 10px;
       fill: #3fb950;
       opacity: 0;
       animation: fadeIn 0.6s ease forwards 0.3s;
     }}
     .subtitle {{
       font-family: "Fira Code", monospace;
-      font-size: 11px;
+      font-size: 10.5px;
       fill: #8b949e;
       opacity: 0;
       animation: fadeIn 0.6s ease forwards;
@@ -104,7 +110,7 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
     }}
     .tag {{
       font-family: "Fira Code", monospace;
-      font-size: 11px;
+      font-size: 10px;
       fill: {cor1};
       filter: url(#glow);
       opacity: 0;
@@ -118,7 +124,6 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
       fill: none;
       stroke: {cor1};
       stroke-width: 0.5;
-      rx: 4;
       opacity: 0;
       animation: fadeIn 0.5s ease forwards;
     }}
@@ -138,8 +143,12 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
     .sl-3 {{ animation-delay: 1.8s; }}
     .sl-4 {{ animation-delay: 2.0s; }}
     .sl-5 {{ animation-delay: 2.2s; }}
+    .bar-track {{
+      fill: #21262d;
+    }}
     .bar-fill {{
       fill: {cor1};
+      transform-box: fill-box;
       transform-origin: left center;
       transform: scaleX(0);
       opacity: 0;
@@ -170,16 +179,13 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
       opacity: 0;
       animation: fadeIn 0.5s ease forwards 0.8s;
     }}
-    .divv {{
-      opacity: 0;
-      animation: fadeIn 0.5s ease forwards 0.9s;
-    }}
-    .particle {{
-      fill: {cor1};
-      opacity: 0;
+    .divider {{
+      stroke: {cor1};
+      stroke-width: 0.5;
+      stroke-opacity: 0.3;
     }}
     @keyframes fadeUp {{
-      from {{ opacity: 0; transform: translateY(12px); }}
+      from {{ opacity: 0; transform: translateY(10px); }}
       to   {{ opacity: 1; transform: translateY(0); }}
     }}
     @keyframes fadeIn {{
@@ -188,30 +194,11 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
     }}
     @keyframes blink {{
       0%, 100% {{ opacity: 1; }}
-      50% {{ opacity: 0; }}
+      50%       {{ opacity: 0; }}
     }}
     @keyframes growBar {{
       from {{ transform: scaleX(0); opacity: 0; }}
       to   {{ transform: scaleX(1); opacity: 1; }}
-    }}
-    @keyframes float1 {{
-      0%   {{ opacity: 0; transform: translate(0,0); }}
-      20%  {{ opacity: 0.6; }}
-      100% {{ opacity: 0; transform: translate(-15px, -60px); }}
-    }}
-    @keyframes float2 {{
-      0%   {{ opacity: 0; transform: translate(0,0); }}
-      20%  {{ opacity: 0.5; }}
-      100% {{ opacity: 0; transform: translate(10px, -80px); }}
-    }}
-    @keyframes float3 {{
-      0%   {{ opacity: 0; transform: translate(0,0); }}
-      25%  {{ opacity: 0.7; }}
-      100% {{ opacity: 0; transform: translate(-8px, -50px); }}
-    }}
-    @keyframes pulse {{
-      0%, 100% {{ r: 2; opacity: 0.4; }}
-      50% {{ r: 3.5; opacity: 1; }}
     }}
   </style>
 </defs>
@@ -219,127 +206,134 @@ svg = f'''<svg width="860" height="280" xmlns="http://www.w3.org/2000/svg">
 <!-- Fundo -->
 <rect width="860" height="280" class="bg" rx="14"/>
 
-<!-- Borda superior com gradiente animado -->
+<!-- Borda superior -->
 <rect x="0" y="0" width="860" height="2" fill="url(#lineGrad)" rx="1"/>
 
-<!-- Partículas flutuantes decorativas -->
-<circle cx="80" cy="240" r="2" fill="{cor1}" opacity="0">
-  <animate attributeName="opacity" values="0;0.5;0" dur="4s" begin="2s" repeatCount="indefinite"/>
-  <animate attributeName="cy" values="240;180;240" dur="4s" begin="2s" repeatCount="indefinite"/>
-  <animate attributeName="cx" values="80;70;80" dur="4s" begin="2s" repeatCount="indefinite"/>
+<!-- Particulas flutuantes -->
+<circle cx="80"  cy="240" r="2"   fill="{cor1}" opacity="0">
+  <animate attributeName="opacity" values="0;0.5;0" dur="4s"   begin="2s"   repeatCount="indefinite"/>
+  <animate attributeName="cy"      values="240;180;240"         dur="4s"   begin="2s"   repeatCount="indefinite"/>
 </circle>
 <circle cx="140" cy="220" r="1.5" fill="{cor2}" opacity="0">
-  <animate attributeName="opacity" values="0;0.6;0" dur="5s" begin="3s" repeatCount="indefinite"/>
-  <animate attributeName="cy" values="220;150;220" dur="5s" begin="3s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0.6;0" dur="5s"   begin="3s"   repeatCount="indefinite"/>
+  <animate attributeName="cy"      values="220;150;220"         dur="5s"   begin="3s"   repeatCount="indefinite"/>
 </circle>
-<circle cx="55" cy="200" r="1" fill="{cor1}" opacity="0">
-  <animate attributeName="opacity" values="0;0.4;0" dur="3.5s" begin="1s" repeatCount="indefinite"/>
-  <animate attributeName="cy" values="200;140;200" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+<circle cx="55"  cy="200" r="1"   fill="{cor1}" opacity="0">
+  <animate attributeName="opacity" values="0;0.4;0" dur="3.5s" begin="1s"   repeatCount="indefinite"/>
+  <animate attributeName="cy"      values="200;140;200"         dur="3.5s" begin="1s"   repeatCount="indefinite"/>
 </circle>
-<circle cx="190" cy="260" r="1.5" fill="{cor2}" opacity="0">
-  <animate attributeName="opacity" values="0;0.5;0" dur="6s" begin="0.5s" repeatCount="indefinite"/>
-  <animate attributeName="cy" values="260;190;260" dur="6s" begin="0.5s" repeatCount="indefinite"/>
-</circle>
-<circle cx="110" cy="250" r="2" fill="{cor1}" opacity="0">
-  <animate attributeName="opacity" values="0;0.3;0" dur="4.5s" begin="4s" repeatCount="indefinite"/>
-  <animate attributeName="cy" values="250;170;250" dur="4.5s" begin="4s" repeatCount="indefinite"/>
+<circle cx="200" cy="260" r="1.5" fill="{cor2}" opacity="0">
+  <animate attributeName="opacity" values="0;0.5;0" dur="6s"   begin="0.5s" repeatCount="indefinite"/>
+  <animate attributeName="cy"      values="260;190;260"         dur="6s"   begin="0.5s" repeatCount="indefinite"/>
 </circle>
 
-<!-- Coluna esquerda -->
-<!-- Saudação -->
-<text x="24" y="32" class="greeting">{emoji}  {periodo}, visitante!</text>
-<text x="24" y="50" class="prompt">~/pedropaulucci27 $</text>
+<!-- ═══════════════════════════════════════ -->
+<!--  COLUNA ESQUERDA  (x=24 .. x=270)      -->
+<!-- ═══════════════════════════════════════ -->
 
-<!-- Nome com gradiente animado -->
-<text x="24" y="100" class="name">Pedro Paulucci</text>
-<rect x="24" y="106" width="8" height="3" fill="{cor1}" class="cursor"/>
+<!-- Saudacao + prompt -->
+<text x="24" y="30" class="greeting">{emoji}  {periodo}, visitante!</text>
+<text x="24" y="46" class="prompt">~/pedropaulucci27 $</text>
+
+<!-- Nome (28px — cabe em 246px) -->
+<text x="24" y="90" class="name">Pedro Paulucci</text>
+
+<!-- Cursor piscante posicionado apos o nome -->
+<rect x="24" y="95" width="7" height="3" fill="{cor1}" class="cursor"/>
 
 <!-- Linha decorativa sob o nome -->
-<rect x="24" y="112" width="0" height="1.5" fill="url(#lineGrad)" rx="1">
-  <animate attributeName="width" from="0" to="230" dur="0.8s" begin="1.2s" fill="freeze"/>
+<rect x="24" y="100" width="0" height="1.5" fill="url(#lineGrad)" rx="1">
+  <animate attributeName="width" from="0" to="220" dur="0.8s" begin="1.2s" fill="freeze"/>
 </rect>
 
-<!-- Subtítulos -->
-<text x="24" y="132" class="subtitle s1">Software Eng. + Data Science &amp; AI</text>
-<text x="24" y="148" class="subtitle s2">{descricao}</text>
-<text x="24" y="164" class="subtitle s3">Ibmec BH · Ibtech · Belo Horizonte</text>
+<!-- Subtitulos -->
+<text x="24" y="118" class="subtitle s1">Software Eng. + Data Science &amp; AI</text>
+<text x="24" y="133" class="subtitle s2">{descricao}</text>
+<text x="24" y="148" class="subtitle s3">Ibmec BH · Ibtech · BH/MG</text>
 
-<!-- Tags com bordas -->
-<rect x="22" y="178" width="110" height="18" rx="4" class="tag-bg tb-1"/>
-<text x="30" y="191" class="tag tag-1">&#x25CF; Data Science</text>
+<!-- Tags — linha 1 -->
+<rect x="22"  y="162" width="108" height="17" rx="4" class="tag-bg tb-1"/>
+<text x="29"  y="174" class="tag tag-1">&#x25CF; Data Science</text>
 
-<rect x="138" y="178" width="80" height="18" rx="4" class="tag-bg tb-2"/>
-<text x="146" y="191" class="tag tag-2">&#x25CF; Web Dev</text>
+<rect x="136" y="162" width="76"  height="17" rx="4" class="tag-bg tb-2"/>
+<text x="143" y="174" class="tag tag-2">&#x25CF; Web Dev</text>
 
-<rect x="22" y="202" width="98" height="18" rx="4" class="tag-bg tb-3"/>
-<text x="30" y="215" class="tag tag-3">&#x25CF; Java &amp; OOP</text>
+<!-- Tags — linha 2 -->
+<rect x="22"  y="184" width="94"  height="17" rx="4" class="tag-bg tb-3"/>
+<text x="29"  y="196" class="tag tag-3">&#x25CF; Java &amp; OOP</text>
 
-<rect x="126" y="202" width="116" height="18" rx="4" class="tag-bg tb-4"/>
-<text x="134" y="215" class="tag tag-4">&#x25CF; Node &amp; Express</text>
+<rect x="122" y="184" width="118" height="17" rx="4" class="tag-bg tb-4"/>
+<text x="129" y="196" class="tag tag-4">&#x25CF; Node &amp; Express</text>
 
-<!-- Divisor vertical animado -->
-<line x1="248" y1="0" x2="248" y2="0" stroke="{cor1}" stroke-width="0.5" stroke-opacity="0.3" class="divv">
+<!-- ═══════════════════════════════════════ -->
+<!--  DIVISOR VERTICAL  (x=284)             -->
+<!-- ═══════════════════════════════════════ -->
+<line x1="284" y1="0" x2="284" y2="0" class="divider">
   <animate attributeName="y2" from="0" to="280" dur="0.8s" begin="0.5s" fill="freeze"/>
 </line>
 
-<!-- Coluna direita: skills -->
-<text x="268" y="32" class="section-title">// skills.json</text>
+<!-- ═══════════════════════════════════════ -->
+<!--  COLUNA DIREITA  (x=300 .. x=836)      -->
+<!--  Bar track x=390, width=420, pct x=816 -->
+<!-- ═══════════════════════════════════════ -->
 
-<!-- Linha decorativa -->
-<rect x="268" y="38" width="0" height="1" fill="url(#lineGrad)" rx="1">
-  <animate attributeName="width" from="0" to="568" dur="0.8s" begin="0.9s" fill="freeze"/>
+<text x="300" y="30" class="section-title">// skills.json</text>
+
+<!-- Linha decorativa sob o titulo -->
+<rect x="300" y="36" width="0" height="1" fill="url(#lineGrad)" rx="1">
+  <animate attributeName="width" from="0" to="536" dur="0.8s" begin="0.9s" fill="freeze"/>
 </rect>
 
-<!-- JavaScript -->
-<text x="268" y="82" class="skill-label sl-1">JavaScript</text>
-<rect x="358" y="72" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="72" width="412" height="8" rx="4" class="bar-fill bf-1"/>
-<text x="824" y="82" class="bar-pct bp-1">90%</text>
+<!-- JavaScript — 90% = 378px -->
+<text x="300" y="72" class="skill-label sl-1">JavaScript</text>
+<rect x="390" y="62" width="420" height="8" rx="4" class="bar-track"/>
+<rect x="390" y="62" width="378" height="8" rx="4" class="bar-fill bf-1"/>
+<text x="816"  y="72" class="bar-pct bp-1">90%</text>
 
-<!-- Python -->
-<text x="268" y="110" class="skill-label sl-2">Python</text>
-<rect x="358" y="100" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="100" width="321" height="8" rx="4" class="bar-fill bf-2"/>
-<text x="824" y="110" class="bar-pct bp-2">70%</text>
+<!-- Python — 70% = 294px -->
+<text x="300" y="100" class="skill-label sl-2">Python</text>
+<rect x="390" y="90" width="420" height="8" rx="4" class="bar-track"/>
+<rect x="390" y="90" width="294" height="8" rx="4" class="bar-fill bf-2"/>
+<text x="816"  y="100" class="bar-pct bp-2">70%</text>
 
-<!-- Java -->
-<text x="268" y="138" class="skill-label sl-3">Java</text>
-<rect x="358" y="128" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="128" width="275" height="8" rx="4" class="bar-fill bf-3"/>
-<text x="824" y="138" class="bar-pct bp-3">60%</text>
+<!-- Java — 60% = 252px -->
+<text x="300" y="128" class="skill-label sl-3">Java</text>
+<rect x="390" y="118" width="420" height="8" rx="4" class="bar-track"/>
+<rect x="390" y="118" width="252" height="8" rx="4" class="bar-fill bf-3"/>
+<text x="816"  y="128" class="bar-pct bp-3">60%</text>
 
-<!-- C -->
-<text x="268" y="166" class="skill-label sl-4">C</text>
-<rect x="358" y="156" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="156" width="229" height="8" rx="4" class="bar-fill bf-4"/>
-<text x="824" y="166" class="bar-pct bp-4">50%</text>
+<!-- C — 50% = 210px -->
+<text x="300" y="156" class="skill-label sl-4">C</text>
+<rect x="390" y="146" width="420" height="8" rx="4" class="bar-track"/>
+<rect x="390" y="146" width="210" height="8" rx="4" class="bar-fill bf-4"/>
+<text x="816"  y="156" class="bar-pct bp-4">50%</text>
 
-<!-- Node.js -->
-<text x="268" y="194" class="skill-label sl-5">Node.js</text>
-<rect x="358" y="184" width="458" height="8" rx="4" fill="#21262d"/>
-<rect x="358" y="184" width="183" height="8" rx="4" class="bar-fill bf-5"/>
-<text x="824" y="194" class="bar-pct bp-5">40%</text>
+<!-- Node.js — 40% = 168px -->
+<text x="300" y="184" class="skill-label sl-5">Node.js</text>
+<rect x="390" y="174" width="420" height="8" rx="4" class="bar-track"/>
+<rect x="390" y="174" width="168" height="8" rx="4" class="bar-fill bf-5"/>
+<text x="816"  y="184" class="bar-pct bp-5">40%</text>
 
-<!-- Linha inferior com gradiente -->
+<!-- Borda inferior -->
 <rect x="0" y="278" width="860" height="2" fill="url(#lineGrad)" rx="1"/>
 
-<!-- Pontos de canto decorativos -->
-<circle cx="12" cy="268" r="2" fill="{cor1}" opacity="0.3">
-  <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+<!-- Pontos de canto -->
+<circle cx="12"  cy="268" r="2" fill="{cor1}" opacity="0.3">
+  <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s"   repeatCount="indefinite"/>
 </circle>
 <circle cx="848" cy="268" r="2" fill="{cor2}" opacity="0.3">
   <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.5s" repeatCount="indefinite"/>
 </circle>
-<circle cx="12" cy="12" r="2" fill="{cor1}" opacity="0.3">
-  <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+<circle cx="12"  cy="12"  r="2" fill="{cor1}" opacity="0.3">
+  <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s"   repeatCount="indefinite"/>
 </circle>
-<circle cx="848" cy="12" r="2" fill="{cor2}" opacity="0.3">
+<circle cx="848" cy="12"  r="2" fill="{cor2}" opacity="0.3">
   <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.8s" repeatCount="indefinite"/>
 </circle>
 
 </svg>'''
 
-with open("profile_animation.svg", "w") as f:
+with open("profile_animation.svg", "w", encoding="utf-8") as f:
     f.write(svg)
 
 print(f"SVG gerado! Periodo: {periodo} ({hora}h)")
