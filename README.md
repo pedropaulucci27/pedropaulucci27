@@ -80,7 +80,7 @@ Estou focado em fortalecer minha base técnica, desenvolver projetos práticos e
 
 <div align="center">
 
-<img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=pedropaulucci27&theme=tokyonight&hide_border=true&background=0d1117&ring=a78bfa&fire=c084fc&currStreakLabel=a78bfa"/>
+<img width="100%" src="[https://github-readme-streak-stats.herokuapp.com/?user=pedropaulucci27&theme=tokyonight&hide_border=true&background=0d1117&ring=a78bfa&fire=c084fc&currStreakLabel=a78bfa](https://github-readme-streak-stats.herokuapp.com/?user=pedropaulucci27&theme=tokyonight&hide_border=true&background=0d1117&ring=a78bfa&fire=c084fc&currStreakLabel=a78bfa)"/>
 
 </div>
 
