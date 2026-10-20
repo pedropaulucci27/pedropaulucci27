@@ -5,17 +5,17 @@
     <stop offset="100%" style="stop-color:#161b22"/>
   </linearGradient>
   <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" style="stop-color:#a78bfa">
-      <animate attributeName="stop-color" values="#a78bfa;#7c3aed;#a78bfa" dur="4s" repeatCount="indefinite"/>
+    <stop offset="0%" style="stop-color:#c084fc">
+      <animate attributeName="stop-color" values="#c084fc;#9333ea;#c084fc" dur="4s" repeatCount="indefinite"/>
     </stop>
-    <stop offset="100%" style="stop-color:#7c3aed">
-      <animate attributeName="stop-color" values="#7c3aed;#a78bfa;#7c3aed" dur="4s" repeatCount="indefinite"/>
+    <stop offset="100%" style="stop-color:#9333ea">
+      <animate attributeName="stop-color" values="#9333ea;#c084fc;#9333ea" dur="4s" repeatCount="indefinite"/>
     </stop>
   </linearGradient>
   <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   style="stop-color:#a78bfa;stop-opacity:0"/>
-    <stop offset="50%"  style="stop-color:#a78bfa;stop-opacity:1"/>
-    <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    <stop offset="0%"   style="stop-color:#c084fc;stop-opacity:0"/>
+    <stop offset="50%"  style="stop-color:#c084fc;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#9333ea;stop-opacity:0"/>
   </linearGradient>
   <filter id="glow">
     <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -45,7 +45,7 @@
     .greeting {
       font-family: "Fira Code", monospace;
       font-size: 11px;
-      fill: #a78bfa;
+      fill: #c084fc;
       opacity: 0;
       animation: fadeIn 0.6s ease forwards 0.2s;
     }
@@ -67,14 +67,14 @@
     .s2 { animation-delay: 1.5s; }
     .s3 { animation-delay: 1.7s; }
     .cursor {
-      fill: #a78bfa;
+      fill: #c084fc;
       opacity: 0;
       animation: fadeIn 0.1s ease forwards 1.4s, blink 1s step-end infinite 1.5s;
     }
     .tag {
       font-family: "Fira Code", monospace;
       font-size: 10px;
-      fill: #a78bfa;
+      fill: #c084fc;
       filter: url(#glow);
       opacity: 0;
       animation: fadeIn 0.5s ease forwards;
@@ -85,7 +85,7 @@
     .tag-4 { animation-delay: 2.6s; }
     .tag-bg {
       fill: none;
-      stroke: #a78bfa;
+      stroke: #c084fc;
       stroke-width: 0.5;
       opacity: 0;
       animation: fadeIn 0.5s ease forwards;
@@ -110,7 +110,7 @@
       fill: #21262d;
     }
     .bar-fill {
-      fill: #a78bfa;
+      fill: #c084fc;
       transform-box: fill-box;
       transform-origin: left center;
       transform: scaleX(0);
@@ -126,7 +126,7 @@
     .bar-pct {
       font-family: "Fira Code", monospace;
       font-size: 9px;
-      fill: #a78bfa;
+      fill: #c084fc;
       opacity: 0;
       animation: fadeIn 0.4s ease forwards;
     }
@@ -143,7 +143,7 @@
       animation: fadeIn 0.5s ease forwards 0.8s;
     }
     .divider {
-      stroke: #a78bfa;
+      stroke: #c084fc;
       stroke-width: 0.5;
       stroke-opacity: 0.3;
     }
@@ -173,19 +173,19 @@
 <rect x="0" y="0" width="860" height="2" fill="url(#lineGrad)" rx="1"/>
 
 <!-- Particulas flutuantes -->
-<circle cx="80"  cy="240" r="2"   fill="#a78bfa" opacity="0">
+<circle cx="80"  cy="240" r="2"   fill="#c084fc" opacity="0">
   <animate attributeName="opacity" values="0;0.5;0" dur="4s"   begin="2s"   repeatCount="indefinite"/>
   <animate attributeName="cy"      values="240;180;240"         dur="4s"   begin="2s"   repeatCount="indefinite"/>
 </circle>
-<circle cx="140" cy="220" r="1.5" fill="#7c3aed" opacity="0">
+<circle cx="140" cy="220" r="1.5" fill="#9333ea" opacity="0">
   <animate attributeName="opacity" values="0;0.6;0" dur="5s"   begin="3s"   repeatCount="indefinite"/>
   <animate attributeName="cy"      values="220;150;220"         dur="5s"   begin="3s"   repeatCount="indefinite"/>
 </circle>
-<circle cx="55"  cy="200" r="1"   fill="#a78bfa" opacity="0">
+<circle cx="55"  cy="200" r="1"   fill="#c084fc" opacity="0">
   <animate attributeName="opacity" values="0;0.4;0" dur="3.5s" begin="1s"   repeatCount="indefinite"/>
   <animate attributeName="cy"      values="200;140;200"         dur="3.5s" begin="1s"   repeatCount="indefinite"/>
 </circle>
-<circle cx="200" cy="260" r="1.5" fill="#7c3aed" opacity="0">
+<circle cx="200" cy="260" r="1.5" fill="#9333ea" opacity="0">
   <animate attributeName="opacity" values="0;0.5;0" dur="6s"   begin="0.5s" repeatCount="indefinite"/>
   <animate attributeName="cy"      values="260;190;260"         dur="6s"   begin="0.5s" repeatCount="indefinite"/>
 </circle>
@@ -195,14 +195,14 @@
 <!-- ═══════════════════════════════════════ -->
 
 <!-- Saudacao + prompt -->
-<text x="24" y="30" class="greeting">&#x2600;&#xFE0F;  Boa tarde, visitante!</text>
+<text x="24" y="30" class="greeting">&#x1F306;  Boa noite, visitante!</text>
 <text x="24" y="46" class="prompt">~/pedropaulucci27 $</text>
 
 <!-- Nome (28px — cabe em 246px) -->
 <text x="24" y="90" class="name">Pedro Paulucci</text>
 
 <!-- Cursor piscante posicionado apos o nome -->
-<rect x="24" y="95" width="7" height="3" fill="#a78bfa" class="cursor"/>
+<rect x="24" y="95" width="7" height="3" fill="#c084fc" class="cursor"/>
 
 <!-- Linha decorativa sob o nome -->
 <rect x="24" y="100" width="0" height="1.5" fill="url(#lineGrad)" rx="1">
@@ -211,7 +211,7 @@
 
 <!-- Subtitulos -->
 <text x="24" y="118" class="subtitle s1">Software Eng. + Data Science &amp; AI</text>
-<text x="24" y="133" class="subtitle s2">No flow, construindo coisas.</text>
+<text x="24" y="133" class="subtitle s2">Noite boa para resolver problemas.</text>
 <text x="24" y="148" class="subtitle s3">Ibmec BH · Ibtech · BH/MG</text>
 
 <!-- Tags — linha 1 -->
@@ -281,16 +281,16 @@
 <rect x="0" y="278" width="860" height="2" fill="url(#lineGrad)" rx="1"/>
 
 <!-- Pontos de canto -->
-<circle cx="12"  cy="268" r="2" fill="#a78bfa" opacity="0.3">
+<circle cx="12"  cy="268" r="2" fill="#c084fc" opacity="0.3">
   <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s"   repeatCount="indefinite"/>
 </circle>
-<circle cx="848" cy="268" r="2" fill="#7c3aed" opacity="0.3">
+<circle cx="848" cy="268" r="2" fill="#9333ea" opacity="0.3">
   <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.5s" repeatCount="indefinite"/>
 </circle>
-<circle cx="12"  cy="12"  r="2" fill="#a78bfa" opacity="0.3">
+<circle cx="12"  cy="12"  r="2" fill="#c084fc" opacity="0.3">
   <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s"   repeatCount="indefinite"/>
 </circle>
-<circle cx="848" cy="12"  r="2" fill="#7c3aed" opacity="0.3">
+<circle cx="848" cy="12"  r="2" fill="#9333ea" opacity="0.3">
   <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.8s" repeatCount="indefinite"/>
 </circle>
 
